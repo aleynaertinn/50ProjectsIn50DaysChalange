@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #e2e2e2;
+  color: #222;
+}
+
+.container-fluid {
+  background-color: #e2e2e2;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+
+  padding: 50px;
+}
+.container-fluid.shhow-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: #56898e;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: trasform 0.5s linear;
+}
+
+.container-fluid.shhow-nav .circle {
+  transform: rotate(-70deg);
+}
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #e2e2e2;
+}
+
+.circle button:focus {
+  outline: none;
+}
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.card {
+  max-width: 100% !important;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.title h1 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #56898e;
+}
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 10;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+nav ul li span {
+  font-size: 5px;
+  margin-right: 10px;
+}
+nav ul li + li {
+  margin-left: 30px;
+  transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: 500;
+  font-size: 25px;
+}
+nav a:hover {
+  color: #ff7979;
+  font-family: 700;
+}
