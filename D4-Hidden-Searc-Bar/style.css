@@ -1,0 +1,64 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  background-color: #7659ec;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.search {
+  position: relative;
+  width: 50px;
+}
+input {
+  background-color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  transition: witdh 0.7s ease;
+  padding-left: 20px;
+}
+
+.btn {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  top: 0;
+  transition: transform 0.2s ease;
+}
+
+input:focus,
+.btn:focus {
+  outline: none;
+}
+.btn span {
+  font-size: 25px;
+}
+
+.search.active input {
+  width: 200px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: witdh 0.7s ease;
+}
+.search.active .btn {
+  transform: translateX(198px);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
